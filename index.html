@@ -30,14 +30,6 @@ html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}
   --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
   --r:10px;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0D1014; --surface:#151A20; --ink:#E8ECF0; --muted:#9AA4AE; --line:#242B33;
-  --accent:#7FA2FF; --accent-ink:#0B1426; --ice:#A9C0FF; --soft:#18203A;
-  --warn:#E8AE52; --warn-soft:#2E2414; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#0D1014; --surface:#151A20; --ink:#E8ECF0; --muted:#9AA4AE; --line:#242B33;
-  --accent:#7FA2FF; --accent-ink:#0B1426; --ice:#A9C0FF; --soft:#18203A;
-  --warn:#E8AE52; --warn-soft:#2E2414; color-scheme:dark}
 
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -630,7 +622,6 @@ body::before{background:var(--surface)}
 /* Fuß hell */
 footer{background:var(--surface);color:var(--muted);border-top:1px solid var(--line)}
 footer .brand b{color:var(--ink)}footer a:hover{color:var(--ink)}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .mapfig{filter:brightness(.92)}}
 .brand b{font-family:var(--f-body);font-stretch:normal;font-weight:700;letter-spacing:.12em;font-size:18px}
 .brand span{font-family:var(--f-body);letter-spacing:.12em;color:var(--muted)}
 .top .vial,footer .vial{border-color:var(--accent)}.top .vial::after,footer .vial::after{background:var(--accent)}
