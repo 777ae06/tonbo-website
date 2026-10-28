@@ -624,6 +624,7 @@ footer{background:var(--surface);color:var(--muted);border-top:1px solid var(--l
 footer .brand b{color:var(--ink)}footer a:hover{color:var(--ink)}
 .brand b{font-family:var(--f-body);font-stretch:normal;font-weight:700;letter-spacing:.12em;font-size:18px}
 .brand span{font-family:var(--f-body);letter-spacing:.12em;color:var(--muted)}
+.stage-cap{font-size:14px;color:var(--muted);margin:0 0 10px}
 .top .vial,footer .vial{border-color:var(--accent)}.top .vial::after,footer .vial::after{background:var(--accent)}
 </style>
 
@@ -651,6 +652,7 @@ footer .brand b{color:var(--ink)}footer a:hover{color:var(--ink)}
 
     <div class="stage">
       <figure style="margin:0;min-width:0">
+        <figcaption class="stage-cap">So sieht Ihre Woche in Tonbo aus. Einfach mal anklicken.</figcaption>
         <div class="board" id="board">
           <div class="board-head"><span><b>Plantafel</b> · KW 43 · Büro</span><span class="hint" id="hint">Neue Anfrage eingegangen</span></div>
           <div class="flowbox" id="flow" aria-live="polite"></div>
@@ -839,10 +841,10 @@ footer .brand b{color:var(--ink)}footer a:hover{color:var(--ink)}
       <p>Sie zahlen einen festen Monatspreis für Ihr ganzes Team, nicht pro Nutzer. Größere Pakete bringen zusätzliche Funktionen mit.</p>
     </div>
     <div class="plans">
-      <div class="plan"><span class="size">bis 5 Mitarbeiter</span><h3>Klein</h3><p class="price">79 € <small>/ Monat</small></p><p class="per">nur 15,80 € pro Mitarbeiter</p><p class="fit">Für Inhaber mit kleinem Team</p><ul><li>Aufträge planen und passend verteilen</li><li>App für alle Monteure</li><li>Berichte mit Fotos und Unterschrift</li><li>Stunden und Material direkt für die Rechnung</li><li>Persönlicher Support und Einrichtung per Videocall</li></ul><a class="btn plan-btn" href="#demo" data-plan="Klein">Demo anfragen</a></div>
-      <div class="plan"><span class="size">bis 10 Mitarbeiter</span><h3>Team</h3><p class="price">119 € <small>/ Monat</small></p><p class="per">nur 11,90 € pro Mitarbeiter</p><p class="fit">Für Betriebe mit vielen Anfragen</p><p class="plus">Alles aus Klein, plus:</p><ul><li><b>E-Mail-Eingang</b>: Anfragen werden automatisch zu Aufträgen</li><li><b>Automatische Rückfragen</b>, wenn Angaben fehlen</li><li><b>Terminerinnerung</b> für Ihre Kunden per E-Mail am Vortag</li></ul><a class="btn plan-btn" href="#demo" data-plan="Team">Demo anfragen</a></div>
-      <div class="plan rec"><span class="size">bis 20 Mitarbeiter</span><h3>Betrieb</h3><p class="price">169 € <small>/ Monat</small></p><p class="per">nur 8,45 € pro Mitarbeiter</p><p class="fit">Für Betriebe mit eigenem Büro</p><p class="plus">Alles aus Team, plus:</p><ul><li><b>Projekte</b> mit Schritten und Fortschritt</li><li><b>Wartungsplanung</b>: fällige Wartungen immer im Blick</li><li><b>Wochenübersicht</b> mit erledigten und abrechenbaren Aufträgen</li></ul><a class="btn plan-btn" href="#demo" data-plan="Betrieb">Demo anfragen</a></div>
-      <div class="plan"><span class="size">bis 30 Mitarbeiter</span><h3>Groß</h3><p class="price">249 € <small>/ Monat</small></p><p class="per">nur 8,30 € pro Mitarbeiter</p><p class="fit">Für mehrere Teams und Standorte</p><p class="plus">Alles aus Betrieb, plus:</p><ul><li><b>Mehrere Teams</b> und Standorte</li><li><b>Datenübernahme</b> und Einrichtung vor Ort</li><li><b>Planungsgespräch</b> jedes Quartal</li></ul><a class="btn plan-btn" href="#demo" data-plan="Groß">Demo anfragen</a></div>
+      <div class="plan"><span class="size">bis 5 Mitarbeiter</span><h3>Klein</h3><p class="price">79 € <small>/ Monat</small></p><p class="fit">Für Inhaber mit kleinem Team</p><ul><li>Aufträge planen und passend verteilen</li><li>App für alle Monteure</li><li>Berichte mit Fotos und Unterschrift</li><li>Stunden und Material direkt für die Rechnung</li><li>Persönlicher Support und Einrichtung per Videocall</li></ul><a class="btn plan-btn" href="#demo" data-plan="Klein">Demo anfragen</a></div>
+      <div class="plan"><span class="size">bis 10 Mitarbeiter</span><h3>Team</h3><p class="price">119 € <small>/ Monat</small></p><p class="fit">Für Betriebe mit vielen Anfragen</p><p class="plus">Alles aus Klein, plus:</p><ul><li><b>E-Mail-Eingang</b>: Anfragen werden automatisch zu Aufträgen</li><li><b>Automatische Rückfragen</b>, wenn Angaben fehlen</li><li><b>Terminerinnerung</b> für Ihre Kunden per E-Mail am Vortag</li></ul><a class="btn plan-btn" href="#demo" data-plan="Team">Demo anfragen</a></div>
+      <div class="plan rec"><span class="size">bis 20 Mitarbeiter</span><h3>Betrieb</h3><p class="price">169 € <small>/ Monat</small></p><p class="fit">Für Betriebe mit eigenem Büro</p><p class="plus">Alles aus Team, plus:</p><ul><li><b>Projekte</b> mit Schritten und Fortschritt</li><li><b>Wartungsplanung</b>: fällige Wartungen immer im Blick</li><li><b>Wochenübersicht</b> mit erledigten und abrechenbaren Aufträgen</li></ul><a class="btn plan-btn" href="#demo" data-plan="Betrieb">Demo anfragen</a></div>
+      <div class="plan"><span class="size">bis 30 Mitarbeiter</span><h3>Groß</h3><p class="price">249 € <small>/ Monat</small></p><p class="fit">Für mehrere Teams und Standorte</p><p class="plus">Alles aus Betrieb, plus:</p><ul><li><b>Mehrere Teams</b> und Standorte</li><li><b>Datenübernahme</b> und Einrichtung vor Ort</li><li><b>Planungsgespräch</b> jedes Quartal</li></ul><a class="btn plan-btn" href="#demo" data-plan="Groß">Demo anfragen</a></div>
     </div>
     <p class="cap-note">Die Mitarbeiterzahl ist eine Obergrenze. Sie können jederzeit ein größeres Paket wählen, wenn Sie dessen Funktionen nutzen möchten.</p>
     <div class="allin"><span>alle Preise netto zzgl. MwSt.</span><span>monatlich kündbar</span><span>14 Tage kostenlos testen, inklusive Einrichtung</span><span>keine Einrichtungsgebühr</span><span>über 30 Mitarbeiter: sprechen Sie uns an</span></div>
@@ -884,7 +886,7 @@ footer .brand b{color:var(--ink)}footer a:hover{color:var(--ink)}
         <p class="err" id="err" hidden></p>
         <button class="btn submit" type="submit">Demo anfragen</button>
       </form>
-      <div class="done-msg" id="done" hidden><h3>Danke, Ihre Anfrage ist da.</h3><p>Wir melden uns innerhalb von zwei Werktagen bei Ihnen.</p></div>
+      <div class="done-msg" id="done" hidden><h3>Danke, Ihre Anfrage ist da.</h3><p>Ich melde mich innerhalb von zwei Werktagen persönlich bei Ihnen. Anton Enderlein, Tonbo</p></div>
     </div>
   </div>
 </section>
