@@ -570,6 +570,70 @@ button.bigbtn:active{transform:scale(.97)}
 .plan-btn{justify-content:center;background:transparent;border-color:var(--line);color:var(--ink);font-size:15px;padding:11px 16px;margin-top:6px}
 .plan.rec .plan-btn{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ───── Überarbeitung Okt. 2026: hell wie die App, eine Schrift, weniger Effekte ───── */
+:root{--f-display:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:var(--f-body);font-stretch:normal;letter-spacing:-.02em}
+h2{font-size:clamp(28px,3.4vw,40px);font-weight:600;line-height:1.12}
+h3{font-weight:600}
+section{padding-block:76px}
+.top{background:color-mix(in srgb,var(--surface) 92%,transparent);border-bottom:1px solid var(--line);color:var(--ink)}
+body::before{background:var(--surface)}
+.top .nav a{color:var(--muted)}.top .nav a:hover{color:var(--ink)}
+.top .brand b{color:var(--ink)}.top .brand span{color:var(--muted)}
+.btn-primary,.nav a.btn-primary,.nav a.btn-primary:hover{background:var(--accent);color:#fff}
+.hero{background:var(--bg);color:var(--ink);padding-block:64px 72px}
+.hero .kicker{font-size:15px;font-weight:500;color:var(--muted);margin:0 0 14px}
+.hero h1{font-family:var(--f-body);font-weight:600;font-size:clamp(36px,4.6vw,56px);line-height:1.06;letter-spacing:-.03em;max-width:14em}
+.hero .lede{color:var(--muted);font-size:18.5px}
+.hero .note{font-family:var(--f-body);font-size:14px;color:var(--muted)}
+.hero .btn-ghost{color:var(--ink);border-color:var(--line)}
+/* Plantafel und Handy bleiben, nur kleiner */
+.stage{margin-top:44px;max-width:1000px;zoom:.86}
+.board,.phone{color:var(--n-ink)}
+.board{box-shadow:0 24px 50px -30px rgba(15,20,30,.45)}
+.phone{box-shadow:0 24px 50px -28px rgba(15,20,30,.5)}
+@media (max-width:760px){.stage{zoom:1}.stage figure:has(.phone){display:none}}
+/* Vergleich */
+.day-head h2{margin:0}
+.facts b{font-family:var(--f-body);font-weight:600}
+.tl-more{margin-top:20px}
+.tl-more summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:8px;font-weight:500;color:var(--accent);padding:6px 0}
+.tl-more summary::-webkit-details-marker{display:none}
+.tl-more summary::after{content:"›";transform:rotate(90deg);transition:transform .15s}
+.tl-more[open] summary::after{transform:rotate(-90deg)}
+/* Funktionen */
+.pillars .head h2{margin:0}
+.pillar{margin-top:64px}
+.pillar h3{font-family:var(--f-body);font-weight:600;font-size:clamp(22px,2.4vw,28px);margin-top:0}
+.pillar li::before{background:var(--line);width:10px}
+.mapfig{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#F4F5F7;box-shadow:0 24px 50px -32px rgba(15,20,30,.35)}
+.mapfig svg{display:block;width:100%;height:auto}
+.mapfig.mini{margin-top:14px;box-shadow:none;border-color:#2B3440}
+
+.contact .row{align-items:end}
+.mapfig figcaption{display:flex;flex-wrap:wrap;gap:6px 18px;padding:10px 14px;background:#fff;border-top:1px solid #E3E6EA;font-size:13.5px;color:#5E6772}
+.mapfig figcaption span{display:inline-flex;align-items:center;gap:7px}
+.mapfig .lg{width:9px;height:9px;border-radius:50%;display:inline-block}.mapfig .lg.b{background:#1F4FD1}.mapfig .lg.o{background:#B4740F}
+/* Libelle: nur noch eine Zeile */
+.story{padding-block:28px;background:var(--bg);border-top:1px solid var(--line)}
+.story .wrap{display:block}
+.story p{display:flex;align-items:center;gap:14px;margin:0;color:var(--muted);font-size:15.5px}
+.story b{color:var(--ink)}
+.fly-ic{width:44px;height:28px;flex:none;fill:none;stroke:var(--accent);stroke-width:1.6}
+/* Preise und Kontakt */
+.pricing .head h2,.contact h2{margin:0}
+.plan h3{font-family:var(--f-body)}
+.price{font-family:var(--f-body);font-weight:600}
+.plan.rec{box-shadow:none}
+.honest p{margin-top:14px}
+/* Fuß hell */
+footer{background:var(--surface);color:var(--muted);border-top:1px solid var(--line)}
+footer .brand b{color:var(--ink)}footer a:hover{color:var(--ink)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .mapfig{filter:brightness(.92)}}
+.brand b{font-family:var(--f-body);font-stretch:normal;font-weight:700;letter-spacing:.12em;font-size:18px}
+.brand span{font-family:var(--f-body);letter-spacing:.12em;color:var(--muted)}
+.top .vial,footer .vial{border-color:var(--accent)}.top .vial::after,footer .vial::after{background:var(--accent)}
 </style>
 
 <header class="top">
@@ -585,14 +649,13 @@ button.bigbtn:active{transform:scale(.97)}
 
 <main id="start">
 <section class="hero">
-  <div class="aurora" aria-hidden="true"><i></i><i></i></div>
   <div class="wrap">
     <div class="hero-copy">
-      <p class="eyebrow" style="color:var(--n-green)">Einsatzplanung für Handwerksbetriebe</p>
-      <h1 style="margin-top:16px">Alles im Blick. <em>Auch wenn’s eng wird.</em></h1>
-      <p class="lede">Tonbo plant Ihre Einsätze, verteilt die Arbeit fair und nimmt Ihnen den Papierkram ab. So bleibt mehr Zeit für das, worauf es ankommt: Ihr Handwerk.</p>
-      <div class="ctas"><a class="btn btn-primary" href="#demo">Demo anfragen</a><a class="btn btn-ghost" href="#vergleich">Zum Vergleich</a></div>
-      <p class="note">Persönliche Einrichtung · fester Monatspreis · alle Mitarbeiter inklusive</p>
+      <p class="kicker">Einsatzplanung für SHK- und Handwerksbetriebe</p>
+      <h1>Alles im Blick, auch wenn’s eng wird.</h1>
+      <p class="lede">Tonbo plant Ihre Einsätze, gibt den Monteuren alles aufs Handy und macht aus dem Bericht die Rechnung. Ohne Zettel, ohne Abtippen am Abend.</p>
+      <div class="ctas"><a class="btn btn-primary" href="#demo">Demo anfragen</a><a class="btn btn-ghost" href="#preise">Preise ansehen</a></div>
+      <p class="note">Fester Monatspreis · alle Mitarbeiter inklusive · monatlich kündbar</p>
     </div>
 
     <div class="stage">
@@ -646,11 +709,6 @@ button.bigbtn:active{transform:scale(.97)}
         </div>
       </figure>
     </div>
-      <ol class="how" aria-label="So funktioniert Tonbo">
-      <li><b>Anfrage übernehmen</b><span>Eingehende E-Mails werden automatisch zu Aufträgen, mit Kunde, Adresse und Anliegen.</span></li>
-      <li><b>Passend einplanen</b><span>Tonbo zeigt, wer die nötige Qualifikation und noch Kapazität hat. Ein Klick genügt.</span></li>
-      <li><b>Ausführen und dokumentieren</b><span>Der Monteur hat alle Infos auf dem Handy. Sein Bericht kommt mit Fotos und Unterschrift direkt ins Büro.</span></li>
-    </ol>
   </div>
 
 </section>
@@ -658,8 +716,7 @@ button.bigbtn:active{transform:scale(.97)}
 <section class="day" id="vergleich">
   <div class="wrap">
     <div class="day-head">
-      <p class="eyebrow">Vergleich</p>
-      <h2 style="margin-top:12px">Planen, bevor der Kaffee kalt ist.</h2>
+      <h2>Ein Auftrag, zwei Abläufe.</h2>
       <p>Ein typischer Auftrag am Morgen: Bei Familie Kaya ist die Heizung ausgefallen. So läuft er in einem Betrieb mit sechs Mitarbeitern ohne und mit Tonbo.</p>
     </div>
 
@@ -675,6 +732,7 @@ button.bigbtn:active{transform:scale(.97)}
       <div><b>Keine</b><span>Büroarbeit am Abend</span></div>
     </div>
 
+    <details class="tl-more"><summary>Den ganzen Ablauf Schritt für Schritt ansehen</summary>
     <div class="tl2">
       <div class="tl-col">
         <h3>Ohne Tonbo</h3>
@@ -700,23 +758,22 @@ button.bigbtn:active{transform:scale(.97)}
         </ol>
       </div>
     </div>
+    </details>
   </div>
 </section>
 
 <section class="pillars" id="funktionen">
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow">Unser Fokus</p>
-      <h2 style="margin-top:12px">Weniger Büro. Mehr Handwerk.</h2>
+      <h2>Weniger Büro. Mehr Handwerk.</h2>
       <p>Ein Handwerksbetrieb verdient sein Geld beim Kunden, nicht am Schreibtisch. Tonbo übernimmt Planung, Abstimmung und Dokumentation, damit sich Ihr Team auf die eigentliche Arbeit konzentrieren kann.</p>
     </div>
 
     <div class="pillar">
       <div>
-        <span class="k">Planung</span>
-        <h3>Mehr Aufträge mit demselben Team.</h3>
+        <h3>Planen: mehr Aufträge mit demselben Team.</h3>
         <p>Tonbo zeigt, wo in Ihrer Woche noch Luft ist, und schlägt vor, wer welchen Auftrag übernehmen kann. So werden aus freien Stunden abrechenbare Aufträge, und Sie sehen jederzeit, was erledigt ist und was abgerechnet werden kann.</p>
-        <ul><li>Freie Kapazität der Woche auf einen Blick</li><li>Vorschläge nach Qualifikation und Verfügbarkeit</li><li>Fällige Wartungen direkt einplanen</li><li>Urlaub und Ausfälle werden automatisch berücksichtigt</li></ul>
+        <ul><li>Freie Kapazität der Woche auf einen Blick</li><li>Vorschläge nach Qualifikation und Verfügbarkeit</li><li>Fällige Wartungen direkt einplanen</li><li>Urlaub und Ausfälle werden automatisch berücksichtigt</li><li>Karte des Tages: wer unterwegs ist und wer schon vor Ort, ohne Anrufe und ohne Ortung</li></ul>
       </div>
       <div class="visual">
         <div class="wk-card" aria-label="Wochenübersicht für den Inhaber">
@@ -728,13 +785,39 @@ button.bigbtn:active{transform:scale(.97)}
           </div>
           <div class="sc"><span class="tag">Vorschlag</span><b>6 Wartungen sind fällig</b><p>In den freien 14 Stunden passen sie diese Woche noch rein. Sven und Ali haben die nötige Qualifikation.</p><span class="sc-btn">Alle einplanen</span></div>
         </div>
+        <figure class="mapfig mini" aria-label="Beispiel der Karte des Tages">
+          <svg viewBox="0 30 460 250" role="img" aria-hidden="true">
+            <rect width="460" height="320" fill="#F4F5F7"/>
+            <path d="M0 210 C 80 200, 140 230, 230 220 S 380 180, 460 190 L460 232 C 380 222, 300 258, 230 262 S 80 246, 0 252 Z" fill="#E4E9EF"/>
+            <g fill="none" stroke-linecap="round">
+              <path d="M-10 70 L470 40" stroke="#AEB4BD" stroke-width="3.2"/>
+              <path d="M60 -10 L130 330" stroke="#AEB4BD" stroke-width="3.2"/>
+              <path d="M-10 150 C 120 140, 260 160, 470 120" stroke="#C5CAD1" stroke-width="2.2"/>
+              <path d="M300 -10 L340 330" stroke="#C5CAD1" stroke-width="2.2"/>
+              <path d="M200 -10 C 210 90, 190 200, 220 330" stroke="#C5CAD1" stroke-width="2"/>
+              <g stroke="#DADDE2" stroke-width="1.1"><path d="M0 105 L470 85"/><path d="M0 185 L460 165"/><path d="M160 0 L170 320"/><path d="M250 0 L270 320"/><path d="M390 0 L410 320"/><path d="M0 285 L460 290"/><path d="M30 0 L50 320"/><path d="M0 30 L460 10"/></g>
+              <path d="M95 160 L 98 146 L 200 151 L 205 96 L 300 86" stroke="#1F4FD1" stroke-width="3"/>
+              <path d="M300 86 L 360 78" stroke="#1F4FD1" stroke-width="2.6" stroke-dasharray="0.1 7" opacity=".8"/>
+            </g>
+            <text x="248" y="243" font-size="10" fill="#8B939C" letter-spacing="1.6" font-family="IBM Plex Sans, sans-serif" font-weight="500">RHEIN</text>
+            <text x="320" y="140" font-size="9.5" fill="#8B939C" letter-spacing="1.6" font-family="IBM Plex Sans, sans-serif" font-weight="500">EHRENFELD</text>
+            <g><rect x="80" y="152" width="26" height="26" rx="6" fill="#14181F" stroke="#fff" stroke-width="2.5"/><path d="M87 172 v-8 l6 -4 l6 4 v8 M91 172 v-4 h4 v4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linejoin="round"/></g>
+            <g fill="#1F4FD1" stroke="#fff" stroke-width="2.5"><path d="M372 52 c-9 0 -15 7 -15 15 c0 11 15 23 15 23 s15 -12 15 -23 c0 -8 -6 -15 -15 -15z"/><path d="M155 228 c-9 0 -15 7 -15 15 c0 11 15 23 15 23 s15 -12 15 -23 c0 -8 -6 -15 -15 -15z"/></g>
+            <circle cx="372" cy="67" r="4.5" fill="#fff"/><circle cx="155" cy="243" r="4.5" fill="#fff"/>
+            <g><circle cx="300" cy="86" r="15" fill="#14181F" stroke="#fff" stroke-width="2.5"/><text x="300" y="90" text-anchor="middle" font-size="10.5" font-weight="600" fill="#fff" font-family="IBM Plex Sans, sans-serif">SR</text>
+              <circle cx="312" cy="98" r="7.5" fill="#1F4FD1" stroke="#fff" stroke-width="2"/><path d="M308.5 99.5 h7 M309.5 99.5 l1-3 h3 l1 3" stroke="#fff" stroke-width="1.3" fill="none"/></g>
+            <g><circle cx="178" cy="236" r="15" fill="#14181F" stroke="#fff" stroke-width="2.5"/><text x="178" y="240" text-anchor="middle" font-size="10.5" font-weight="600" fill="#fff" font-family="IBM Plex Sans, sans-serif">AK</text>
+              <circle cx="190" cy="248" r="7.5" fill="#B4740F" stroke="#fff" stroke-width="2"/><path d="M187 251 l5 -5 M190 245 l2 2" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round"/></g>
+          </svg>
+          <figcaption><span><i class="lg b"></i>Sven · unterwegs, noch etwa 6 Min</span><span><i class="lg o"></i>Ali · arbeitet vor Ort</span></figcaption>
+        </figure>
+
       </div>
     </div>
 
     <div class="pillar rev">
       <div>
-        <span class="k">Dokumentation</span>
-        <h3>Einmal erfasst, überall verfügbar.</h3>
+        <h3>Abschließen: einmal erfasst, überall verfügbar.</h3>
         <p>Der Monteur dokumentiert direkt beim Kunden. Stunden und Material stehen sofort für die Rechnung bereit, der Lagerbestand stimmt, und der Projektfortschritt aktualisiert sich automatisch. Das Abtippen am Abend entfällt.</p>
         <ul><li>Material wird automatisch vom Lager abgebucht</li><li>Rechnungspositionen mit einem Klick übernehmen</li><li>Projektfortschritt ohne Rückfragen</li><li>Checklisten digital abgelegt und durchsuchbar</li></ul>
       </div>
@@ -753,30 +836,21 @@ button.bigbtn:active{transform:scale(.97)}
 
 <section class="story" id="name">
   <div class="wrap">
-    <div class="story-art"><canvas id="fly" aria-hidden="true"></canvas><span class="kanji">蜻蛉 · tonbo</span></div>
-    <div>
-      <p class="eyebrow">Warum Tonbo</p>
-      <h2 style="margin-top:12px">Benannt nach der Libelle.</h2>
-      <p>Die Libelle, japanisch Tonbo, hat fast einen Rundumblick und ändert in einem Augenblick die Richtung. Genau das braucht ein Handwerksbetrieb: den Überblick über alle Baustellen und die Flexibilität, schnell umzuplanen.</p>
-      <div class="traits">
-        <div><b>Rundumblick</b><span>Alle Einsätze und Mitarbeiter auf einen Blick.</span></div>
-        <div><b>Flexibel</b><span>Neue Aufträge, Notdienste und Ausfälle sind schnell eingeplant.</span></div>
-        <div><b>Nach vorn</b><span>Weniger Telefonate und Zettel, mehr erledigte Aufträge.</span></div>
-      </div>
-    </div>
+    <p><svg class="fly-ic" viewBox="0 0 64 40" aria-hidden="true"><ellipse cx="41" cy="10" rx="4.2" ry="10" transform="rotate(12 41 10)"/><ellipse cx="34" cy="10.5" rx="3.8" ry="9.5" transform="rotate(-14 34 10.5)"/><ellipse cx="41" cy="30" rx="4.2" ry="10" transform="rotate(-12 41 30)"/><ellipse cx="34" cy="29.5" rx="3.8" ry="9.5" transform="rotate(14 34 29.5)"/><path d="M6 20h29"/><circle cx="48" cy="20" r="3.4"/></svg>
+    <span><b>Tonbo</b> ist japanisch für Libelle: fast Rundumblick, und sie ändert in einem Augenblick die Richtung. So soll sich Planung im Betrieb anfühlen.</span></p>
   </div>
 </section>
 
 <section class="pricing" id="preise">
   <div class="wrap">
     <div class="head">
-      <div><p class="eyebrow">Preise</p><h2 style="margin-top:12px">Ein fester Preis. Nicht pro Kopf.</h2></div>
+      <div><h2>Ein fester Preis. Nicht pro Kopf.</h2></div>
       <p>Sie zahlen einen festen Monatspreis für Ihr ganzes Team, nicht pro Nutzer. Größere Pakete bringen zusätzliche Funktionen mit.</p>
     </div>
     <div class="plans">
       <div class="plan"><span class="size">bis 5 Mitarbeiter</span><h3>Klein</h3><p class="price">79 € <small>/ Monat</small></p><p class="per">nur 15,80 € pro Mitarbeiter</p><p class="fit">Für Inhaber mit kleinem Team</p><ul><li>Aufträge planen und passend verteilen</li><li>App für alle Monteure</li><li>Berichte mit Fotos und Unterschrift</li><li>Stunden und Material direkt für die Rechnung</li><li>Persönlicher Support und Einrichtung per Videocall</li></ul><a class="btn plan-btn" href="#demo" data-plan="Klein">Demo anfragen</a></div>
       <div class="plan"><span class="size">bis 10 Mitarbeiter</span><h3>Team</h3><p class="price">119 € <small>/ Monat</small></p><p class="per">nur 11,90 € pro Mitarbeiter</p><p class="fit">Für Betriebe mit vielen Anfragen</p><p class="plus">Alles aus Klein, plus:</p><ul><li><b>E-Mail-Eingang</b>: Anfragen werden automatisch zu Aufträgen</li><li><b>Automatische Rückfragen</b>, wenn Angaben fehlen</li><li><b>Terminerinnerung</b> für Ihre Kunden per E-Mail am Vortag</li></ul><a class="btn plan-btn" href="#demo" data-plan="Team">Demo anfragen</a></div>
-      <div class="plan rec"><span class="badge">Unsere Empfehlung</span><span class="size">bis 20 Mitarbeiter</span><h3>Betrieb</h3><p class="price">169 € <small>/ Monat</small></p><p class="per">nur 8,45 € pro Mitarbeiter</p><p class="fit">Für Betriebe mit eigenem Büro</p><p class="plus">Alles aus Team, plus:</p><ul><li><b>Projekte</b> mit Schritten und Fortschritt</li><li><b>Wartungsplanung</b>: fällige Wartungen immer im Blick</li><li><b>Wochenübersicht</b> mit erledigten und abrechenbaren Aufträgen</li></ul><a class="btn plan-btn" href="#demo" data-plan="Betrieb">Demo anfragen</a></div>
+      <div class="plan rec"><span class="size">bis 20 Mitarbeiter</span><h3>Betrieb</h3><p class="price">169 € <small>/ Monat</small></p><p class="per">nur 8,45 € pro Mitarbeiter</p><p class="fit">Für Betriebe mit eigenem Büro</p><p class="plus">Alles aus Team, plus:</p><ul><li><b>Projekte</b> mit Schritten und Fortschritt</li><li><b>Wartungsplanung</b>: fällige Wartungen immer im Blick</li><li><b>Wochenübersicht</b> mit erledigten und abrechenbaren Aufträgen</li></ul><a class="btn plan-btn" href="#demo" data-plan="Betrieb">Demo anfragen</a></div>
       <div class="plan"><span class="size">bis 30 Mitarbeiter</span><h3>Groß</h3><p class="price">249 € <small>/ Monat</small></p><p class="per">nur 8,30 € pro Mitarbeiter</p><p class="fit">Für mehrere Teams und Standorte</p><p class="plus">Alles aus Betrieb, plus:</p><ul><li><b>Mehrere Teams</b> und Standorte</li><li><b>Datenübernahme</b> und Einrichtung vor Ort</li><li><b>Planungsgespräch</b> jedes Quartal</li></ul><a class="btn plan-btn" href="#demo" data-plan="Groß">Demo anfragen</a></div>
     </div>
     <p class="cap-note">Die Mitarbeiterzahl ist eine Obergrenze. Sie können jederzeit ein größeres Paket wählen, wenn Sie dessen Funktionen nutzen möchten.</p>
@@ -788,8 +862,7 @@ button.bigbtn:active{transform:scale(.97)}
 <section class="contact" id="demo">
   <div class="wrap">
     <div class="honest">
-      <p class="eyebrow">Demo anfragen</p>
-      <h2 style="margin-top:12px">Wir fangen gerade an.</h2>
+      <h2>Demo anfragen</h2>
       <p>Tonbo ist neu, und das sagen wir offen. Wir entwickeln das Produkt gemeinsam mit den ersten Betrieben, damit es genau das kann, was im Alltag gebraucht wird. Wer jetzt einsteigt, gestaltet mit.</p>
       <ol>
         <li><div><b>Anfrage senden</b><br><span>Ein paar Angaben genügen. Wir melden uns innerhalb von zwei Werktagen.</span></div></li>
@@ -809,23 +882,12 @@ button.bigbtn:active{transform:scale(.97)}
           <label for="f-gewerk">Gewerk<select id="f-gewerk" name="gewerk"><option value="">Bitte wählen</option><option>Sanitär, Heizung, Klima</option><option>Elektro</option><option>Maler und Lackierer</option><option>Dachdecker</option><option>Tischler und Schreiner</option><option>Fliesen und Bau</option><option>Anderes Gewerk</option></select></label>
           <label for="f-size">Mitarbeiter<select id="f-size" name="mitarbeiter"><option value="">Bitte wählen</option><option>1–5</option><option>6–10</option><option>11–20</option><option>21–30</option><option>mehr als 30</option></select></label>
         </div>
-        <label for="f-paket">Interessantes Paket <span class="opt">(optional)</span><select id="f-paket" name="paket"><option value="">Noch offen</option><option>Klein</option><option>Team</option><option>Betrieb</option><option>Groß</option></select></label>
+        <input type="hidden" id="f-paket" name="paket" value="">
         <div class="row">
           <label for="f-mail">E-Mail<input id="f-mail" name="email" type="email" autocomplete="email"></label>
           <label for="f-tel">Telefon <span class="opt">(optional)</span><input id="f-tel" name="telefon" type="tel" autocomplete="tel"></label>
         </div>
-        <fieldset>
-          <legend>Wie planen Sie aktuell? <span class="opt">(mehrere möglich)</span></legend>
-          <div class="chips">
-            <label><input type="checkbox" id="p1" name="heute" value="Whiteboard"><span>Whiteboard</span></label>
-            <label><input type="checkbox" id="p2" name="heute" value="Papier"><span>Papier</span></label>
-            <label><input type="checkbox" id="p3" name="heute" value="Excel"><span>Excel</span></label>
-            <label><input type="checkbox" id="p4" name="heute" value="WhatsApp"><span>WhatsApp</span></label>
-            <label><input type="checkbox" id="p5" name="heute" value="Software"><span>Software</span></label>
-          </div>
-        </fieldset>
-        <label for="f-rech">Womit schreiben Sie Rechnungen? <span class="opt">(optional)</span><input id="f-rech" name="rechnungen" placeholder="z. B. Lexware, sevDesk, Word, Steuerbüro"></label>
-        <label for="f-wichtig">Was ist bei der Planung aktuell die größte Herausforderung? <span class="opt">(optional)</span><textarea id="f-wichtig" name="wichtig" placeholder="z. B. Notdienste einplanen, Stundenzettel, Rückfragen von Kunden"></textarea></label>
+        <label for="f-wichtig">Was nervt bei der Planung am meisten? <span class="opt">(optional)</span><textarea id="f-wichtig" name="wichtig" rows="3" placeholder="z. B. Notdienste einplanen, Stundenzettel, Rückfragen von Kunden"></textarea></label>
         <label class="check" for="f-pilot"><input type="checkbox" id="f-pilot" name="pilot" value="ja"><span>Ich interessiere mich für einen der 3 Pilotplätze.</span></label>
         <label class="check" for="f-ds"><input type="checkbox" id="f-ds" name="datenschutz" value="ja"><span>Ich bin einverstanden, dass Tonbo meine Angaben zur Bearbeitung der Anfrage speichert. Mehr dazu in der <a href="#datenschutz">Datenschutzerklärung</a>.</span></label>
         <p class="err" id="err" hidden></p>
@@ -996,31 +1058,13 @@ button.bigbtn:active{transform:scale(.97)}
 
   document.querySelectorAll('[data-plan]').forEach(function(a){a.addEventListener('click',function(){document.getElementById('f-paket').value=a.dataset.plan;});});
   document.querySelectorAll('a[href="#datenschutz"]').forEach(function(a){a.addEventListener('click',function(){document.getElementById('datenschutz').open=true;});});
-  /* Libelle */
-  var cv=document.getElementById('fly'),ctx=cv.getContext('2d'),t0=performance.now();
-  function size(){var r=cv.getBoundingClientRect(),d=window.devicePixelRatio||1;cv.width=r.width*d;cv.height=r.height*d;ctx.setTransform(d,0,0,d,0,0);}
-  function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim();}
-  function wing(x,y,len,w,ang){ctx.save();ctx.translate(x,y);ctx.rotate(ang);ctx.beginPath();ctx.ellipse(len/2,0,len/2,w,0,0,Math.PI*2);ctx.fillStyle='rgba(127,162,255,.10)';ctx.fill();ctx.strokeStyle=css('--n-green');ctx.lineWidth=1;ctx.globalAlpha=.9;ctx.stroke();
-    ctx.globalAlpha=.35;for(var k=1;k<5;k++){ctx.beginPath();ctx.moveTo(len*k/5,-w*.8);ctx.lineTo(len*k/5,w*.8);ctx.stroke();}ctx.restore();}
-  function draw(now){var r=cv.getBoundingClientRect(),W=r.width,H=r.height;if(!W)return;
-    var t=reduce?0:(now-t0)/1000;ctx.clearRect(0,0,W,H);var cx=W/2,cy=H/2;ctx.strokeStyle=css('--n-line');ctx.lineWidth=1;
-    for(var i=1;i<=4;i++){ctx.beginPath();ctx.arc(cx,cy,W*.11*i,0,Math.PI*2);ctx.stroke();}
-    var bob=Math.sin(t*1.6)*3,s=W/420,f=Math.sin(t*28)*.06;ctx.save();ctx.translate(cx,cy+bob);ctx.scale(s,s);
-    wing(-6,-18,150,15,-0.12+f);wing(-6,-18,150,15,Math.PI+0.12-f);wing(-6,4,132,13,0.16-f);wing(-6,4,132,13,Math.PI-0.16+f);
-    ctx.fillStyle=css('--n-green');ctx.beginPath();ctx.arc(-6,-48,13,0,Math.PI*2);ctx.fill();ctx.beginPath();ctx.ellipse(-6,-14,9,22,0,0,Math.PI*2);ctx.fill();
-    ctx.beginPath();ctx.moveTo(-11,6);ctx.lineTo(-1,6);ctx.lineTo(-3,150);ctx.lineTo(-9,150);ctx.closePath();ctx.fill();
-    ctx.fillStyle=css('--n-bg');for(var k=0;k<7;k++){ctx.fillRect(-12,26+k*17,12,2);}ctx.restore();
-    if(!reduce)requestAnimationFrame(draw);}
-  size();window.addEventListener('resize',function(){size();if(reduce)draw(0);});
-  if(reduce)draw(0);else requestAnimationFrame(draw);
-
   /* Form */
   var form=document.getElementById('demoForm'),err=document.getElementById('err'),done=document.getElementById('done');
   var live=/tonbo-handwerk\.de$|github\.io$/.test(location.hostname);
   function fail(msg,el){err.textContent=msg;err.hidden=false;if(el)el.focus();}
   form.addEventListener('submit',function(e){
     e.preventDefault();err.hidden=true;
-    var need=[['f-name','Ihr Name'],['f-firma','Betrieb'],['f-gewerk','Gewerk'],['f-size','Mitarbeiter'],['f-mail','E-Mail']];
+    var need=[['f-name','Ihr Name'],['f-firma','Betrieb'],['f-size','Mitarbeiter'],['f-mail','E-Mail']];
     for(var i=0;i<need.length;i++){var el=document.getElementById(need[i][0]);if(!el.value.trim())return fail('Bitte füllen Sie noch „'+need[i][1]+'“ aus.',el);}
     var m=document.getElementById('f-mail');if(!/^\S+@\S+\.\S+$/.test(m.value))return fail('Die E-Mail-Adresse sieht unvollständig aus. Bitte prüfen Sie sie noch einmal.',m);
     if(!document.getElementById('f-ds').checked)return fail('Bitte bestätigen Sie die Datenschutz-Einwilligung, damit wir Ihnen antworten dürfen.');
